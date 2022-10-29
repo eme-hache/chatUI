@@ -117,6 +117,7 @@ function App () {
   const [detailsActive, setDetailsActive] = useState(false)
   const [menuActive, setMenuActive] = useState(true)
   const [currentUser, setCurrentUser] = useState({})
+  const [darkMode, setDarkMode] = useState(false);
 
   const toggleMenu = user => {
     if (user) {
@@ -130,14 +131,21 @@ function App () {
     setDetailsActive(!detailsActive)
   }
 
+  const toggleTheme = () => {
+    setDarkMode(!darkMode)
+  }
+
   return (
-    <div className='flex flex-col bg-[#1E1F24]'>
-      <header className='bg-[#141517] h-[8vh] w-full flex items-center justify-between px-8'>
+    <div className={`${darkMode ? 'dark' : ''} flex flex-col bg-[#1E1F24]`}>
+      <header className='bg-slate-300 dark:bg-[#1E1F24] h-[8vh] w-full flex items-center justify-between px-8'>
         <div>
-          <h1 className={`${menuActive ? 'block' : 'hidden'} text-2xl text-white font-bold`}>chatUI</h1>
+          <h1 className={`${menuActive ? 'block' : 'hidden'} text-2xl text-white font-bold lg:block`}>
+            chatUI
+          </h1>
+
           <button
             onClick={toggleMenu}
-            className={`${menuActive ? 'hidden' : 'block'} bg-[#22222A] p-3 rounded-full text-white text-xl`}
+            className={`${menuActive ? 'hidden' : 'block'} bg-[#22222A] p-3 rounded-full text-white text-xl lg:hidden`}
           >
             <RiMenu3Fill />
           </button>
@@ -155,6 +163,8 @@ function App () {
         </form>
 
         <div className='flex items-center gap-6'>
+          <input type='checkbox' onChange={toggleTheme} />
+
           <div className='relative'>
             <RiNotification3Line className='text-xl text-gray-300' />
             <span className='bg-purple-600 absolute rounded-full text-[10px] text-white py-[2px] px-[6px] -top-2 -right-2'>3</span>

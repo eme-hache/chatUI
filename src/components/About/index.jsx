@@ -42,16 +42,16 @@ export default function About ({ toggleDetails }) {
         </div>
 
         {/* File */}
-        <div className='flex gap-4 items-center mb-4'>
-          <div className=''>
+        <div className='flex flex-1 gap-4 items-center mb-4'>
+          <div>
             <img
               className='h-10 w-10 rounded-full bg-[#292933] object-cover'
               src='https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'
             />
           </div>
 
-          <div>
-            <h5 className='text-gray-300 font-semibold'>
+          <div className='overflow-hidden flex flex-col flex-1'>
+            <h5 className='text-gray-300 font-semibold truncate'>
               Very important file.figma
             </h5>
             <p className='text-gray-500 text-xs'>
@@ -62,16 +62,16 @@ export default function About ({ toggleDetails }) {
 
         {/* File */}
         <div className='flex gap-4 items-center mb-4'>
-          <div className=''>
+          <div>
             <img
               className='h-10 w-10 rounded-full bg-[#292933] object-cover'
               src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/1200px-Adobe_XD_CC_icon.svg.png'
             />
           </div>
 
-          <div>
-            <h5 className='text-gray-300 font-semibold'>
-              List of something.xd
+          <div className='overflow-hidden flex flex-col flex-1'>
+            <h5 className='text-gray-300 font-semibold truncate'>
+              List of something.xdasdasdasdasdasd
             </h5>
             <p className='text-gray-500 text-xs'>
               7.5 MB 3.22.22, 11:15 AM
@@ -88,9 +88,9 @@ export default function About ({ toggleDetails }) {
             />
           </div>
 
-          <div>
-            <h5 className='text-gray-300 font-semibold'>
-              Very important fil.svg
+          <div className='overflow-hidden flex flex-col flex-1'>
+            <h5 className='text-gray-300 font-semibold truncate'>
+              Very important file
             </h5>
             <p className='text-gray-500 text-xs'>
               7.5 MB 3.22.22, 11:15 AM

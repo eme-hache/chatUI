@@ -18,7 +18,7 @@ export default function UserPreview ({ user, toggleMenu }) {
         {user.isActive && <RiCheckboxBlankCircleFill className='absolute text-green-500 right-0 bottom-1 text-sm' />}
       </div>
 
-      <div className='flex flex-col flex-1 justify-between min-w-0'>
+      <div className='flex flex-col flex-1 justify-between'>
         <div className='flex items-center justify-between'>
           <div className='overflow-hidden flex'>
             <span className='text-gray-300 font-semibold truncate'>

@@ -22,7 +22,7 @@ export default function Chat ({ toggleDetails }) {
             className='min-w-0'
           >
             <div className='overflow-hidden flex flex-col'>
-              <h1 className='lg:text-3xl text-gray-300 truncate'>Desing Teamasldjnaksudhauisdhajksdbnjkasdhkajsdhlashjdjkashdfbjshdfgjsdhfbjsdhfgjshdgfjshdfgjsdhfg</h1>
+              <h1 className='lg:text-3xl text-gray-300 truncate'>Desing Team</h1>
               <p className='text-gray-500 truncate text-left'>60 members</p>
             </div>
           </button>
