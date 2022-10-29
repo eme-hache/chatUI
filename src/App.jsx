@@ -9,6 +9,7 @@ import {
   RiMenu3Fill,
 } from 'react-icons/ri'
 import Chat from './components/Chat'
+import About from './components/About'
 
 const ATTACHED_USERS = [
   {
@@ -113,6 +114,7 @@ const ALL_USERS = [
 ]
 
 function App () {
+  const [detailsActive, setDetailsActive] = useState(false)
   const [menuActive, setMenuActive] = useState(true)
   const [currentUser, setCurrentUser] = useState({})
 
@@ -124,12 +126,21 @@ function App () {
     setMenuActive(!menuActive)
   }
 
+  const toggleDetails = () => {
+    setDetailsActive(!detailsActive)
+  }
+
   return (
-    <div className='min-h-screen flex flex-col'>
-      <header className='bg-[#141517] h-[8vh] md:h-[5vh] w-full flex items-center justify-between px-8'>
+    <div className='flex flex-col bg-[#1E1F24]'>
+      <header className='bg-[#141517] h-[8vh] w-full flex items-center justify-between px-8'>
         <div>
-          {/* <img src='' alt='Logo' /> */}
-          <h1 className='text-2xl text-white font-bold'>chatUI</h1>
+          <h1 className={`${menuActive ? 'block' : 'hidden'} text-2xl text-white font-bold`}>chatUI</h1>
+          <button
+            onClick={toggleMenu}
+            className={`${menuActive ? 'hidden' : 'block'} bg-[#22222A] p-3 rounded-full text-white text-xl`}
+          >
+            <RiMenu3Fill />
+          </button>
         </div>
 
         <form className='hidden md:block'>
@@ -160,16 +171,9 @@ function App () {
         </div>
       </header>
 
-      <main className='h-[92-vh] md:h-[95vh] grid grid-cols-1 lg:grid-cols-8'>
-        <button
-          onClick={toggleMenu}
-          className='fixed bottom-8 right-8 bg-[#22222A] p-3 rounded-full text-white'
-        >
-          <RiMenu3Fill />
-        </button>
-
+      <main className='flex'>
         <section
-          className={`col-span-2 bg-[#22222A] z-10 p-8 overflow-y-scroll fixed lg:static transition-all w-full h-full ${menuActive ? 'left-0' : '-left-full'} scrollbar-thin scrollbar-thumb-gray-500 overflow-y-scroll scrollbar-thumb-rounded-full`}
+          className={`lg:max-w-[25%] bg-[#22222A] z-10 p-8 overflow-y-scroll fixed lg:static transition-all w-full h-[92vh] ${menuActive ? 'left-0' : '-left-full'} scrollbar-thin scrollbar-thumb-gray-500 overflow-y-scroll scrollbar-thumb-rounded-full`}
         >
           {/* Title and search input */}
           <div className='mb-8'>
@@ -204,13 +208,17 @@ function App () {
         </section>
 
         <section
-          className='col-span-4 bg-[#141517] p-8 relative h-full'
+          className={`${detailsActive ? 'lg:max-w-[50%] ' : 'lg:max-w-[75%]'} bg-[#141517] w-full relative h-[92vh] transition-all flex-1`}
         >
           {/* Current chat info */}
-          <Chat user={currentUser} />
+          <Chat user={currentUser} toggleDetails={toggleDetails} />
         </section>
 
-        <section className='col-span-2 bg-red-500'>s</section>
+        <section
+          className={`${detailsActive ? 'right-0 w-full lg:w-[25%]' : '-right-full '} bg-[#1E1F24] h-[92vh] transition-all fixed`}
+        >
+          <About toggleDetails={toggleDetails} />
+        </section>
       </main>
     </div>
   )
