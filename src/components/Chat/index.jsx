@@ -22,8 +22,8 @@ export default function Chat ({ toggleDetails }) {
             className='min-w-0'
           >
             <div className='overflow-hidden flex flex-col'>
-              <h1 className='lg:text-3xl text-gray-300 truncate'>Desing Team</h1>
-              <p className='text-gray-500 truncate text-left'>60 members</p>
+              <h1 className='lg:text-3xl text-black dark:text-gray-300 truncate'>Desing Team</h1>
+              <p className='text-gray-500 truncate text-left'>60 members, 10 online</p>
             </div>
           </button>
 
@@ -31,7 +31,7 @@ export default function Chat ({ toggleDetails }) {
             <div className='flex items-center gap-3'>
               <label className='text-gray-500'>Add</label>
 
-              <button className='bg-[#050505] p-2.5 rounded-full text-gray-300'>
+              <button className='bg-gray-200 dark:bg-[#050505] p-2.5 rounded-full text-gray-600 dark:text-gray-300'>
                 <RiAddLine />
               </button>
             </div>
@@ -40,7 +40,7 @@ export default function Chat ({ toggleDetails }) {
       </header>
 
       {/* Chat */}
-      <div className='h-[75%] lg:h-[67%] p-8 scrollbar-thin scrollbar-thumb-gray-500 overflow-y-scroll scrollbar-thumb-rounded-full'>
+      <div className='h-[75%] lg:h-[67%] p-8 scrollbar-thin scrollbar-thumb-gray-200 dark:scrollbar-thumb-gray-500 overflow-y-scroll scrollbar-thumb-rounded-full'>
         {/* Message block */}
         <div className='flex gap-4'>
           <img
@@ -48,27 +48,27 @@ export default function Chat ({ toggleDetails }) {
             src='https://img.freepik.com/free-photo/college-life-modern-lifestyle-education-concept-cheerful-good-looking-redhead-female-student-with-foxy-long-hair-wearing-headphones-neck-backpack-smiling-camera_1258-73003.jpg'
           />
           <div>
-            <h4 className='text-gray-300 font-semibold mb-2'>
+            <h4 className='text-black dark:text-gray-300 font-semibold mb-2'>
               Sarah Jhonson
               <span className='text-gray-500 font-normal text-sm ml-2'>10:12am</span>
             </h4>
 
             <div className='flex items-center gap-2 mb-2'>
-              <p className='bg-[#1E1F24] p-2 px-4 rounded-tr-lg rounded-br-lg rounded-bl-lg text-gray-500'>
+              <p className='bg-[#e3f1fc] dark:bg-[#1E1F24] p-2 px-4 rounded-tr-lg rounded-br-lg rounded-bl-lg text-gray-600 dark:text-gray-500'>
                 Hi, are you still web designer?
               </p>
 
-              <button className='text-gray-300'>
+              <button className='text-[#6B7C93] dark:text-gray-300'>
                 <RiMore2Fill />
               </button>
             </div>
 
             <div className='flex items-center gap-2'>
-              <p className='bg-[#1E1F24] p-2 px-4 rounded-tr-lg rounded-br-lg rounded-bl-lg text-gray-500'>
+              <p className='bg-[#e3f1fc] dark:bg-[#1E1F24] p-2 px-4 rounded-tr-lg rounded-br-lg rounded-bl-lg text-gray-600 dark:text-gray-500'>
                 Would love to see some design 😊
               </p>
 
-              <button className='text-gray-300'>
+              <button className='text-[#6B7C93] dark:text-gray-300'>
                 <RiMore2Fill />
               </button>
             </div>
@@ -77,9 +77,9 @@ export default function Chat ({ toggleDetails }) {
 
         {/* Divider */}
         <div className='my-8 flex items-center'>
-          <hr className='border-gray-700 flex-1' />
-          <p className='text-gray-500 text-xs text-center mx-4'>Today, March 24</p>
-          <hr className='border-gray-700 flex-1' />
+          <hr className='border-gray-200 dark:border-gray-700 flex-1' />
+          <p className='text-gray-400 dark:text-gray-500 text-xs text-center mx-4'>Today, March 24</p>
+          <hr className='border-gray-200 dark:border-gray-700 flex-1' />
         </div>
 
         {/* Message block */}
@@ -89,27 +89,27 @@ export default function Chat ({ toggleDetails }) {
             src='https://img.freepik.com/free-photo/glad-sporty-woman-touching-her-brown-hair-while-posing-sandy-beach-enchanting-caucasian-girl-yellow-swimwear-fooling-around-tropical-island_197531-9002.jpg'
           />
           <div>
-            <h4 className='text-gray-300 font-semibold mb-2'>
+            <h4 className='text-black dark:text-gray-300 font-semibold mb-2'>
               Ania James
               <span className='text-gray-500 font-normal text-sm ml-2'>10:12am</span>
             </h4>
 
             <div className='flex items-center gap-2 mb-2'>
-              <p className='bg-[#1E1F24] p-2 px-4 rounded-tr-lg rounded-br-lg rounded-bl-lg text-gray-500'>
+              <p className='bg-[#e3f1fc] dark:bg-[#1E1F24] p-2 px-4 rounded-tr-lg rounded-br-lg rounded-bl-lg text-gray-600 dark:text-gray-500'>
                 Hey, happy to hear from you. Yes, I will be back in a couple of days.
               </p>
 
-              <button className='text-gray-300'>
+              <button className='text-[#6B7C93] dark:text-gray-300'>
                 <RiMore2Fill />
               </button>
             </div>
 
             <div className='flex items-center gap-2 mb-2'>
-              <p className='bg-[#1E1F24] p-2 px-4 rounded-tr-lg rounded-br-lg rounded-bl-lg text-gray-500'>
+              <p className='bg-[#e3f1fc] dark:bg-[#1E1F24] p-2 px-4 rounded-tr-lg rounded-br-lg rounded-bl-lg text-gray-600 dark:text-gray-500'>
                 Here are some Design i took earlier today.
               </p>
 
-              <button className='text-gray-300'>
+              <button className='text-[#6B7C93] dark:text-gray-300'>
                 <RiMore2Fill />
               </button>
             </div>
@@ -125,7 +125,7 @@ export default function Chat ({ toggleDetails }) {
                 src='https://img.freepik.com/free-vector/cartoon-graphic-design-landing-page_52683-70881.jpg'
               />
 
-              <button className='text-gray-300'>
+              <button className='text-[#6B7C93] dark:text-gray-300'>
                 <RiMore2Fill />
               </button>
             </div>
@@ -139,7 +139,7 @@ export default function Chat ({ toggleDetails }) {
             src='https://img.freepik.com/free-photo/senior-couple-hugging-home_1098-1297.jpg'
           />
           <div>
-            <h4 className='text-gray-300 font-semibold mb-2 text-right'>
+            <h4 className='text-black dark:text-gray-300 font-semibold mb-2 text-right'>
               Me
               <span className='text-gray-500 font-normal text-sm ml-2'>10:12am</span>
             </h4>
@@ -149,7 +149,7 @@ export default function Chat ({ toggleDetails }) {
                 Hi, are you still web designer?
               </p>
 
-              <button className='text-gray-300'>
+              <button className='text-[#6B7C93] dark:text-gray-300'>
                 <RiMore2Fill />
               </button>
             </div>
@@ -159,7 +159,7 @@ export default function Chat ({ toggleDetails }) {
                 Would love to see some design 😊
               </p>
 
-              <button className='text-gray-300'>
+              <button className='text-[#6B7C93] dark:text-gray-300'>
                 <RiMore2Fill />
               </button>
             </div>
@@ -168,16 +168,16 @@ export default function Chat ({ toggleDetails }) {
       </div>
 
       {/* Text area */}
-      <div className='bg-[#22222A] h-[10%] lg:h-[13%] w-full flex items-center px-8'>
+      <div className='bg-white dark:bg-[#22222A] h-[10%] lg:h-[13%] w-full flex items-center px-8'>
         <form className='relative w-full'>
-          <BiMicrophone className='text-gray-300 absolute left-4 text-xl top-[10px] hover:cursor-pointer' />
+          <BiMicrophone className='text-[#768396] absolute left-4 text-xl top-[10px] hover:cursor-pointer' />
           <input
-            className='py-2 pl-11 pr-36 bg-[#1E1F24] outline-none w-full rounded-full text-gray-300'
+            className='py-2 pl-11 pr-36 bg-[#F3F7FA] dark:bg-[#050505] outline-none w-full rounded-full text-[#23235F] dark:text-gray-300'
             type='text'
             placeholder='Type something here...'
           />
 
-          <div className='flex absolute right-4 top-[10px] text-gray-300 items-center gap-2 text-xl'>
+          <div className='flex absolute right-4 top-[10px] text-[#768396] items-center gap-2 text-xl'>
             <RiImage2Line className='hover:cursor-pointer' />
             <RiEmotionHappyLine className='hover:cursor-pointer' />
             <RiSendPlaneLine className='hover:cursor-pointer' />

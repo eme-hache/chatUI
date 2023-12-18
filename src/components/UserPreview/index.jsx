@@ -21,7 +21,7 @@ export default function UserPreview ({ user, toggleMenu }) {
       <div className='flex flex-col flex-1 justify-between'>
         <div className='flex items-center justify-between'>
           <div className='overflow-hidden flex'>
-            <span className='text-gray-300 font-semibold truncate'>
+            <span className='text-black dark:text-gray-300 font-semibold truncate'>
               {user.name}
             </span>
           </div>
@@ -33,7 +33,7 @@ export default function UserPreview ({ user, toggleMenu }) {
 
         <div className='flex justify-between'>
           {user.isTyping
-            ? <p className='text-green-300'>Typing...</p>
+            ? <p className='text-green-500 dark:text-green-300'>Typing...</p>
             : <p className='text-gray-500'>{user.lastMessage}</p>}
 
           <div>
@@ -42,7 +42,7 @@ export default function UserPreview ({ user, toggleMenu }) {
                 {user.unread}
               </span>}
             {user.status === 'seen'
-              && <RiCheckDoubleFill className='text-xl text-green-300' />}
+              && <RiCheckDoubleFill className='text-xl text-green-500 dark:text-green-300' />}
           </div>
         </div>
       </div>
